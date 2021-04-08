@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="multiply_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="multiply_TB" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="799333fs"></ZoomStartTime>
+      <ZoomEndTime time="1040134fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/multiply_TB/A_TB" type="array">
+      <obj_property name="ElementShortName">A_TB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A_TB[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/B_TB" type="array">
+      <obj_property name="ElementShortName">B_TB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">B_TB[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/P_TB" type="array">
+      <obj_property name="ElementShortName">P_TB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">P_TB[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/OF_TB" type="logic">
+      <obj_property name="ElementShortName">OF_TB</obj_property>
+      <obj_property name="ObjectShortName">OF_TB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/i" type="array">
+      <obj_property name="ElementShortName">i[8:0]</obj_property>
+      <obj_property name="ObjectShortName">i[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/A" type="array">
+      <obj_property name="ElementShortName">A[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/B" type="array">
+      <obj_property name="ElementShortName">B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">B[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/P" type="array">
+      <obj_property name="ElementShortName">P[3:0]</obj_property>
+      <obj_property name="ObjectShortName">P[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/OF" type="logic">
+      <obj_property name="ElementShortName">OF</obj_property>
+      <obj_property name="ObjectShortName">OF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/a0" type="array">
+      <obj_property name="ElementShortName">a0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a0[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/a1" type="array">
+      <obj_property name="ElementShortName">a1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/a2" type="array">
+      <obj_property name="ElementShortName">a2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/a3" type="array">
+      <obj_property name="ElementShortName">a3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a3[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiply_TB/multi4_DUT/P8b" type="array">
+      <obj_property name="ElementShortName">P8b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P8b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>
