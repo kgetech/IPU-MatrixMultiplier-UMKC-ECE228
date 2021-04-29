@@ -10,10 +10,10 @@ module FA_nb
     #(parameter BIT_WIDTH=4)(
         //input Cin,
         input [BIT_WIDTH-1:0] fa_A, fa_B,
-        output [BIT_WIDTH-1:0] fa_G,
+        output [BIT_WIDTH-1:0] fa_S,
         output fa_OF  //because we don't care about signs--yet
     );
     
-    assign {fa_OF,fa_G} = fa_A + fa_B;
+    assign {fa_OF,fa_S} = fa_A + fa_B;
     
 endmodule

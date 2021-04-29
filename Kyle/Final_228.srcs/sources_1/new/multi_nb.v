@@ -25,10 +25,10 @@ module multi_nb
     assign m_a1 = {{(BIT_WIDTH-1){1'b0}}, (m_B[1]? m_A : {BIT_WIDTH{1'b0}}) ,1'd0};       //
     assign m_a2 = {{(BIT_WIDTH-2){1'b0}}, (m_B[2]? m_A : {BIT_WIDTH{1'b0}}),2'd0};        //
     assign m_a3 = {{(BIT_WIDTH-3){1'b0}}, (m_B[3]? m_A : {BIT_WIDTH{1'b0}}),3'd0};        //
-    //assign a4 = {{(BIT_WIDTH-4){1'b0}}, (B[4]? A : {BIT_WIDTH{1'b0}}),4'd0};      //
-    //assign a5 = {{(BIT_WIDTH-5){1'b0}}, (B[5]? A : {BIT_WIDTH{1'b0}}),5'd0};      //
-    //assign a6 = {{(BIT_WIDTH-6){1'b0}}, (B[6]? A : {BIT_WIDTH{1'b0}}),6'd0};      //
-    //assign a7 = {{(BIT_WIDTH-7){1'b0}}, (B[7]? A : {BIT_WIDTH{1'b0}}),7'd0};      //
+    //assign a4 = {{(BIT_WIDTH-4){1'b0}}, (m_B[4]? m_A : {BIT_WIDTH{1'b0}}),4'd0};      //
+    //assign a5 = {{(BIT_WIDTH-5){1'b0}}, (m_B[5]? m_A : {BIT_WIDTH{1'b0}}),5'd0};      //
+    //assign a6 = {{(BIT_WIDTH-6){1'b0}}, (m_B[6]? m_A : {BIT_WIDTH{1'b0}}),6'd0};      //
+    //assign a7 = {{(BIT_WIDTH-7){1'b0}}, (m_B[7]? m_A : {BIT_WIDTH{1'b0}}),7'd0};      //
     assign m_PLb = m_a0 + m_a1 + m_a2 + m_a3/* + a4 + a5 + a6 + a7*/;                         //
     //////////////////////////////////////////////////////////////////////////////////
     
