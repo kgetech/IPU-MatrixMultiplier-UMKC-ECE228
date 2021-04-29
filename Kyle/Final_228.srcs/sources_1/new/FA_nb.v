@@ -9,11 +9,11 @@
 module FA_nb
     #(parameter BIT_WIDTH=4)(
         //input Cin,
-        input [BIT_WIDTH-1:0] A, B,
-        output [BIT_WIDTH-1:0] G,
-        output OF  //because we don't care about signs--yet
+        input [BIT_WIDTH-1:0] fa_A, fa_B,
+        output [BIT_WIDTH-1:0] fa_G,
+        output fa_OF  //because we don't care about signs--yet
     );
     
-    assign {OF,G} = A + B;
+    assign {fa_OF,fa_G} = fa_A + fa_B;
     
 endmodule

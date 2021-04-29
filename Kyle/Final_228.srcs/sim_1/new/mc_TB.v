@@ -23,7 +23,7 @@ module mc_TB;
     reg [BIT_WIDTH:0] i;
     initial
     begin
-        $display("tCLK | Ai Bi Ci | Ao Bo Co | OF |");
+        $display("tCLK | Ai Bi Ci | Ao Bo Co | OF |"); 
         #7;
         Ci_TB <= 0;
         ENM_TB <= 0;

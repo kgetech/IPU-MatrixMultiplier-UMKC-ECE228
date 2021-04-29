@@ -3,73 +3,150 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="mc_TB_behav.wdb" id="1">
+      <db_ref path="register_TB_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="mc_TB" />
+            <top_module name="register_TB" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="274fs"></ZoomEndTime>
-      <Cursor1Time time="1000fs"></Cursor1Time>
+      <ZoomStartTime time="783333fs"></ZoomStartTime>
+      <ZoomEndTime time="1043334fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
-   <wvobject fp_name="/mc_TB/Ai_TB" type="array">
-      <obj_property name="ElementShortName">Ai_TB[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Ai_TB[3:0]</obj_property>
+   <WVObjectSize size="27" />
+   <wvobject fp_name="/register_TB/tb_clk" type="logic">
+      <obj_property name="ElementShortName">tb_clk</obj_property>
+      <obj_property name="ObjectShortName">tb_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/Bi_TB" type="array">
-      <obj_property name="ElementShortName">Bi_TB[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Bi_TB[3:0]</obj_property>
+   <wvobject fp_name="/register_TB/tb_rw" type="logic">
+      <obj_property name="ElementShortName">tb_rw</obj_property>
+      <obj_property name="ObjectShortName">tb_rw</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/Ci_TB" type="array">
-      <obj_property name="ElementShortName">Ci_TB[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Ci_TB[3:0]</obj_property>
+   <wvobject fp_name="/register_TB/tb_am" type="logic">
+      <obj_property name="ElementShortName">tb_am</obj_property>
+      <obj_property name="ObjectShortName">tb_am</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/ENM_TB" type="logic">
-      <obj_property name="ElementShortName">ENM_TB</obj_property>
-      <obj_property name="ObjectShortName">ENM_TB</obj_property>
+   <wvobject fp_name="/register_TB/tb_row" type="array">
+      <obj_property name="ElementShortName">tb_row[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_row[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/ENA_TB" type="logic">
-      <obj_property name="ElementShortName">ENA_TB</obj_property>
-      <obj_property name="ObjectShortName">ENA_TB</obj_property>
+   <wvobject fp_name="/register_TB/tb_DA" type="array">
+      <obj_property name="ElementShortName">tb_DA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_DA[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/CLK_TB" type="logic">
-      <obj_property name="ElementShortName">CLK_TB</obj_property>
-      <obj_property name="ObjectShortName">CLK_TB</obj_property>
+   <wvobject fp_name="/register_TB/tb_AB" type="array">
+      <obj_property name="ElementShortName">tb_AB[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_AB[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/Ao_TB" type="array">
-      <obj_property name="ElementShortName">Ao_TB[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Ao_TB[3:0]</obj_property>
+   <wvobject fp_name="/register_TB/tb_AA" type="array">
+      <obj_property name="ElementShortName">tb_AA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_AA[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/Bo_TB" type="array">
-      <obj_property name="ElementShortName">Bo_TB[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Bo_TB[3:0]</obj_property>
+   <wvobject fp_name="/register_TB/tb_OA" type="array">
+      <obj_property name="ElementShortName">tb_OA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_OA[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/Co_TB" type="array">
-      <obj_property name="ElementShortName">Co_TB[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Co_TB[3:0]</obj_property>
+   <wvobject fp_name="/register_TB/tb_OB" type="array">
+      <obj_property name="ElementShortName">tb_OB[63:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_OB[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/OF_TB" type="logic">
-      <obj_property name="ElementShortName">OF_TB</obj_property>
-      <obj_property name="ObjectShortName">OF_TB</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mc_TB/t" type="array">
-      <obj_property name="ElementShortName">t[4:0]</obj_property>
-      <obj_property name="ObjectShortName">t[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mc_TB/i" type="array">
+   <wvobject fp_name="/register_TB/i" type="array">
       <obj_property name="ElementShortName">i[4:0]</obj_property>
       <obj_property name="ObjectShortName">i[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mc_TB/BIT_WIDTH" type="array">
-      <obj_property name="ElementShortName">BIT_WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">BIT_WIDTH[31:0]</obj_property>
+   <wvobject fp_name="/register_TB/j" type="array">
+      <obj_property name="ElementShortName">j[3:0]</obj_property>
+      <obj_property name="ObjectShortName">j[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/rw" type="logic">
+      <obj_property name="ElementShortName">rw</obj_property>
+      <obj_property name="ObjectShortName">rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/am" type="logic">
+      <obj_property name="ElementShortName">am</obj_property>
+      <obj_property name="ObjectShortName">am</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/in_row" type="array">
+      <obj_property name="ElementShortName">in_row[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_row[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/AA" type="array">
+      <obj_property name="ElementShortName">AA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AA[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/AB1" type="array">
+      <obj_property name="ElementShortName">AB1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AB1[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/AB2" type="array">
+      <obj_property name="ElementShortName">AB2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AB2[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/AB3" type="array">
+      <obj_property name="ElementShortName">AB3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AB3[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/AB4" type="array">
+      <obj_property name="ElementShortName">AB4[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AB4[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/DA" type="array">
+      <obj_property name="ElementShortName">DA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DA[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/OA" type="array">
+      <obj_property name="ElementShortName">OA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OA[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/OB1" type="array">
+      <obj_property name="ElementShortName">OB1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OB1[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/OB2" type="array">
+      <obj_property name="ElementShortName">OB2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OB2[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/OB3" type="array">
+      <obj_property name="ElementShortName">OB3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OB3[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/OB4" type="array">
+      <obj_property name="ElementShortName">OB4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OB4[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_TB/rf_DUT/rf" type="array">
+      <obj_property name="ElementShortName">rf[15:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">rf[15:0][15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
