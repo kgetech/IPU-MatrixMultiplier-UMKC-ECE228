@@ -1,5 +1,3 @@
-Vivado Simulator 2020.2
-Time resolution is 1 ps
 Input Value:  1  0  0  0
 Input Value:  0  1  0  0
 Input Value:  0  0  1  0

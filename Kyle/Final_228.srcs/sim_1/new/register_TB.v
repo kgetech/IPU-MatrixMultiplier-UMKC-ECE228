@@ -35,7 +35,7 @@ module register_TB;
         .rf_OB2(tb_OB[47:32]), 
         .rf_OB1(tb_OB[63:48])
         );
-    initial $timeformat(-9, 2, "ns", 20); //sets time format for $display of %t
+    initial $timeformat(-9, 2, "ns", 10); //sets time format for $display of %t
 
     initial tb_clk <= 0;
     always #5 tb_clk = ~tb_clk;
