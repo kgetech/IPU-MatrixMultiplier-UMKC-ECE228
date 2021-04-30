@@ -19,8 +19,8 @@ module register_file(
     always@(posedge clk)
         begin
             if (rf_rw == 1) rf[DA][15:0] <= rf_inRow; //writing
-            else
-                begin 
+            else rf[DA][15:0] <=  rf[DA][15:0];
+                //begin 
                 if (rf_am == 0) {rf_OA,rf_OB1,rf_OB2,rf_OB3,rf_OB4} <= { //output will always be in row form
                     rf[rf_AA][15:0],
                     rf[rf_AB1][15:12], //transpose column 1 into row 1
@@ -41,7 +41,7 @@ module register_file(
                     rf[rf_AB4][3:0]
                     };
                 else {rf_OA,rf_OB1,rf_OB2,rf_OB3,rf_OB4} <= {rf[rf_AA], rf[rf_AB1], rf[rf_AB2], rf[rf_AB3], rf[rf_AB4]};
-                end
+               //end
         end
 
 endmodule
