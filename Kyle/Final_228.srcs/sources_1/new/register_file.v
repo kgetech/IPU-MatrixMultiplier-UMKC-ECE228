@@ -6,6 +6,7 @@
 // Module Name: register_file
 // Project Name: Final_228
 //////////////////////////////////////////////////////////////////////////////////
+//TODO: parametrize this file for bit-width
 module register_file(
         input clk, rf_rw, rf_am,  //rf_am is to set to add-mode when rf_am == 1, this allows row outputs from B when enabled, for addition
         input [15:0] rf_inRow,
