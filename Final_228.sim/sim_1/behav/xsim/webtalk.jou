@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Webtalk v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Apr 29 17:52:48 2021
-# Process ID: 1508
-# Current directory: C:/Final_228/Final_228.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/matrix_multi_TB_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Final_228/Final_228.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Final_228/Final_228.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Mon May  3 23:29:01 2021
+# Process ID: 328122
+# Current directory: /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/inst_mem_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source C:/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/matrix_multi_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+source /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/inst_mem_TB_behav/webtalk/xsim_webtalk.tcl -notrace

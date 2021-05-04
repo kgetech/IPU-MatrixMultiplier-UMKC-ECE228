@@ -8,10 +8,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 //TODO: parametrize this file for bit-width
 module register_file(
-        input clk, rf_rw, rf_am,  //rf_am is to set to add-mode when rf_am == 1, this allows row outputs from B when enabled, for addition
-        input [15:0] rf_inRow,
-        input [3:0] rf_AA, rf_AB1, rf_AB2, rf_AB3, rf_AB4, DA,
-        output reg [15:0] rf_OA, rf_OB1, rf_OB2, rf_OB3, rf_OB4
+        input   clk,
+                rf_ld_en,  //for testing
+                rf_rw, 
+                rf_am,  //rf_am is to set to add-mode when rf_am == 1, this allows row outputs from B when enabled, for addition
+        input [15:0]    rf_inRow,
+                        rf_load, //for testing
+        input [3:0] rf_AA,
+                rf_ld_adrs, 
+                rf_AB1, 
+                rf_AB2, 
+                rf_AB3, 
+                rf_AB4, 
+                rf_DA,
+        output reg [15:0] rf_OA, 
+                rf_OB1, 
+                rf_OB2, 
+                rf_OB3, 
+                rf_OB4
     );
     
     reg [15:0] rf [15:0]; 
@@ -19,8 +33,9 @@ module register_file(
  
     always@(posedge clk)
         begin
-            if (rf_rw == 1) rf[DA][15:0] <= rf_inRow; //writing
-            else rf[DA][15:0] <=  rf[DA][15:0];
+            if(rf_ld_en) rf[rf_ld_adrs][15:0] <= rf_load; //for testing
+            else if (rf_rw == 1) rf[rf_DA][15:0] <= rf_inRow; //writing
+            else rf[rf_DA][15:0] <=  rf[rf_DA][15:0];
                 //begin 
                 if (rf_am == 0) {rf_OA,rf_OB1,rf_OB2,rf_OB3,rf_OB4} <= { //output will always be in row form
                     rf[rf_AA][15:0],

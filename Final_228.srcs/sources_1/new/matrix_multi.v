@@ -10,8 +10,13 @@
 
 module matrix_multi
     #(parameter MM_BIT_WIDTH = 4)(
-    input clk, mm_en,
-    input [MM_BIT_WIDTH*4 - 1:0] mm_A, mm_B1, mm_B2, mm_B3, mm_B4,
+    input   clk, 
+            mm_en,
+    input [MM_BIT_WIDTH*4 - 1:0] mm_A, 
+            mm_B1, 
+            mm_B2, 
+            mm_B3, 
+            mm_B4,
     output reg [MM_BIT_WIDTH*4 - 1:0] mm_C,
     output reg mm_OF
     );

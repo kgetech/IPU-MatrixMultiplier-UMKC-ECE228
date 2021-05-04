@@ -1,19 +1,23 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 040fbf20cf124eddb048d028cf0dca8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot matrix_multi_TB_behav xil_defaultlib.matrix_multi_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
+Running: /mnt/SATASSD/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 040fbf20cf124eddb048d028cf0dca8c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ipu_TB_behav xil_defaultlib.ipu_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Decoder
 Compiling module xil_defaultlib.register_file
-Compiling module xil_defaultlib.multi_nb
+Compiling module xil_defaultlib.i_reg
 Compiling module xil_defaultlib.FA_nb
+Compiling module xil_defaultlib.mat_add
+Compiling module xil_defaultlib.multi_nb
 Compiling module xil_defaultlib.row_multi
 Compiling module xil_defaultlib.matrix_multi
 Compiling module xil_defaultlib.ipu_top
-Compiling module xil_defaultlib.matrix_multi_TB
+Compiling module xil_defaultlib.ipu_TB
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot matrix_multi_TB_behav
+Built simulation snapshot ipu_TB_behav

@@ -45,7 +45,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys-a7-50t"/>
-    <Option Name="WTXSimLaunchSim" Val="194"/>
+    <Option Name="WTXSimLaunchSim" Val="417"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -93,7 +93,7 @@
       <File Path="$PSRCDIR/sources_1/imports/SamFiles/InstructionMemory.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../home/lightingnerd/Downloads/SamFiles/InstructionMemory.v"/>
-          <Attr Name="ImportTime" Val="1620008212"/>
+          <Attr Name="ImportTime" Val="1620097503"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -186,6 +186,21 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/new/ipu_TB.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/new/inst_mem_TB.v">
+        <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/new/matrix_multi_TB.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
@@ -234,7 +249,6 @@
       <File Path="$PSRCDIR/sim_1/imports/SamFiles/Decoder_TB.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../home/lightingnerd/Downloads/SamFiles/Decoder_TB.v"/>
           <Attr Name="ImportTime" Val="1620008179"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -244,7 +258,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="ipu_top"/>
+        <Option Name="TopModule" Val="ipu_TB"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>

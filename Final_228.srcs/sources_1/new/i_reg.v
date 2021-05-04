@@ -20,12 +20,14 @@ module i_reg
     input [1:0] ir_inadd_en, 
     input ir_inMUXD, 
     input ir_inrw, 
+    input [1:0] ir_inwt_rd,
     input [IR_BIT_WIDTH - 1:0] ir_inDA,
     output reg ir_outDMX, 
     output reg ir_outmm_en, 
     output reg [1:0] ir_outadd_en, 
     output reg ir_outMUXD, 
     output reg ir_outrw,
+    output reg [1:0] ir_outwt_rd,
     output reg [IR_BIT_WIDTH - 1:0] ir_outDA
     );
 
@@ -38,7 +40,8 @@ module i_reg
        ir_outmm_en  <=  ir_inmm_en;   
        ir_outadd_en <=  ir_inadd_en;  
        ir_outMUXD   <=  ir_inMUXD;    
-       ir_outrw     <=  ir_inrw;     
+       ir_outrw     <=  ir_inrw;  
+       ir_outwt_rd  <=  ir_inwt_rd;    
        ir_outDA     <=  ir_inDA;
     end
 endmodule

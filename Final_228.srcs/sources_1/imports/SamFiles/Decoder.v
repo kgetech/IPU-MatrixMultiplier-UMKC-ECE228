@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Sam Lewandoski
 // 
 // Create Date: 04/29/2021 09:57:30 PM
 // Design Name: 
@@ -22,7 +22,7 @@
 
 module Decoder(
     input [25:0] IW,
-    input clk,
+    input  clk,
     output reg [3:0] DA,
     output reg [3:0] AA,
     output reg [3:0] AB1,
@@ -34,18 +34,18 @@ module Decoder(
     output reg [1:0] add_en,
     output reg MUXD,
     output reg rf_rw,
-    output reg rf_am
+    output reg rf_am,
+    output reg [1:0] dec_wt_rd
     );
-    reg [31:0] IW0;
 
     always@(posedge clk)
     begin
-        IW0 <= IW;
-        if(IW0[25] == 0 & IW0[24] == 0) //ADD 
+        dec_wt_rd <= IW[25:24];
+        if(IW[25] == 0 & IW[24] == 0) //ADD 
         begin
-            DA[3:0] <= IW0[23:20];
-            AA[3:0] <= IW0[19:16];
-            AB1[3:0] <= IW0[15:12];
+            DA[3:0] <= IW[23:20];
+            AA[3:0] <= IW[19:16];
+            AB1[3:0] <= IW[15:12];
             DMX <= 1'b1;
             mm_en <= 1'b0;
             add_en <= 2'b01;
@@ -53,11 +53,11 @@ module Decoder(
             rf_rw <= 1'b1;
             rf_am <= 1'b1;
         end
-        else if(IW0[25] == 0 & IW0[24] == 1) //MLT
+        else if(IW[25] == 0 & IW[24] == 1) //MLT
         begin
-            DA[3:0] <= IW0[23:20];
-            AA[3:0] <= IW0[19:16];
-            AB1[3:0] <= IW0[15:12];
+            DA[3:0] <= IW[23:20];
+            AA[3:0] <= IW[19:16];
+            AB1[3:0] <= IW[15:12];
             AB2[3:0] <= IW[11:8];
             AB3[3:0] <= IW[7:4];
             AB4[3:0] <= IW[3:0];
@@ -68,7 +68,7 @@ module Decoder(
             rf_rw <= 1'b1;
             rf_am <= 1'b0;
         end
-        else if(IW0[25] == 1 & IW0[24] == 0) //MV
+        else if(IW[25] == 1 & IW[24] == 0) //MV
         begin
             DA[3:0] <= IW[23:20];
             AA[3:0] <= IW[19:16];
@@ -78,9 +78,11 @@ module Decoder(
             MUXD <= 1'b1;
             rf_rw <= 1'b1;
         end
-        else if(IW0[25] == 1 & IW0[24] == 1) //WT
+        else if(IW[25] == 1 & IW[24] == 1) //WT
         begin
             rf_rw <= 1'b0;
+            AA[3:0] <= IW[19:16];
+            DA[3:0] <= IW[23:20]; //for keeping track in the testbench
         end
     end
 endmodule

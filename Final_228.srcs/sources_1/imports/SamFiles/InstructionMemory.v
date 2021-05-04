@@ -22,24 +22,27 @@
 
 module InstructionMemory(
     input clk,
-    input rst,
-    output reg [25:0] IW
+    input im_rst,
+    input im_ld_en,
+    input [25:0] im_instLoad,
+    output reg [25:0] im_IW
     );
     
-    reg [25:0] instructions[31:0];
-    reg [4:0] counter;
+    reg [25:0] im_instructions[31:0];
+    reg [4:0] im_counter;
 
-    always@(posedge clk | rst)
+    always@(posedge clk)
     begin
-    if(rst == 1)
-    counter <= 5'd0;
+    if(im_rst == 1)
+        im_counter <= 5'd0;
     else
-    counter <= counter+5'd1;
+        im_counter <= im_counter+5'd1;
     end
     
     always@(posedge clk)
     begin
-    IW <= instructions[counter][25:0];
+        if (im_ld_en) im_instructions[im_counter] <= im_instLoad;
+        else im_IW <= im_instructions[im_counter][25:0];
     end
     
 endmodule
