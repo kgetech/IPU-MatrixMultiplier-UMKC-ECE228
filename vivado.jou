@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 28 19:44:25 2021
+# Process ID: 16544
+# Current directory: C:/Final_228
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17932 C:\Final_228\Final_228.xpr
+# Log file: C:/Final_228/vivado.log
+# Journal file: C:/Final_228\vivado.jou
+#-----------------------------------------------------------sstart_guiopen_project C:/Final_228/Final_228.xpr
+update_compile_order -fileset sources_1

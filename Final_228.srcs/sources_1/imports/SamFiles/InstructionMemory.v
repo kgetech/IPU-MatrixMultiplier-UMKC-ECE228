@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Sam Lewandoski
 // 
 // Create Date: 05/02/2021 08:11:49 PM
 // Design Name: 

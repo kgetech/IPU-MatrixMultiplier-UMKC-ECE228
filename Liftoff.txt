@@ -1,0 +1,8 @@
+| t=  738.00ns | Read Attempt # 16 | Adrs 4'b0000: [ 1  2  3  4] | OF z
+| t=  748.00ns | Read Attempt # 17 | Adrs 4'b0001: [ 5  6  7  8] | OF z
+| t=  758.00ns | Read Attempt # 18 | Adrs 4'b0010: [ 9 10 11 12] | OF z
+| t=  768.00ns | Read Attempt # 19 | Adrs 4'b0011: [13 14 15  0] | OF z
+| t=  778.00ns | Read Attempt # 20 | Adrs 4'b0100: [ 1  1  1  1] | OF z
+| t=  788.00ns | Read Attempt # 21 | Adrs 4'b0101: [ 2  2  2  2] | OF z
+| t=  798.00ns | Read Attempt # 22 | Adrs 4'b0110: [ 3  3  3  3] | OF z
+| t=  808.00ns | Read Attempt # 23 | Adrs 4'b0111: [ 4  4  4  4] | OF z

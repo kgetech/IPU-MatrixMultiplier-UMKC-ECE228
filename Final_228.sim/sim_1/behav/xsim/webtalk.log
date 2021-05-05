@@ -2,13 +2,13 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon May  3 23:29:01 2021
-# Process ID: 328122
+# Start of session at: Tue May  4 21:48:24 2021
+# Process ID: 60260
 # Current directory: /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/inst_mem_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/matrix_multi_TB_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/inst_mem_TB_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/inst_mem_TB_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon May  3 23:29:03 2021. For additional details about this file, please refer to the WebTalk help file at /mnt/SATASSD/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Mon May  3 23:29:03 2021...
+source /mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/matrix_multi_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/mnt/SATASSD/Final_228/Final_228.sim/sim_1/behav/xsim/xsim.dir/matrix_multi_TB_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue May  4 21:48:26 2021. For additional details about this file, please refer to the WebTalk help file at /mnt/SATASSD/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue May  4 21:48:26 2021...

@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 28 19:44:25 2021
+# Process ID: 16544
+# Current directory: C:/Final_228
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17932 C:\Final_228\Final_228.xpr
+# Log file: C:/Final_228/vivado.log
+# Journal file: C:/Final_228\vivado.jou
+#-----------------------------------------------------------sstart_guiopen_project C:/Final_228/Final_228.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Final_228/Final_228.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 999.242 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 29 01:10:16 2021...
+celled
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/Final_228/vivado_pid16544.debug)
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 28 19:46:06 2021...

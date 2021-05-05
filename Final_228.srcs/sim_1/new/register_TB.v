@@ -11,8 +11,9 @@
 //TODO: Figure out disconnects in waveform analysis, and why B matrix is outputting strange values
 
 module register_TB;
-    reg tb_clk, tb_rw, tb_am;
-    reg [15:0] tb_inRow;
+    reg tb_clk, tb_rw, tb_am,tb_ld_en;
+    reg [15:0] tb_inRow,
+                tb_load;
     reg [3:0] tb_AA, tb_DA;
     reg [15:0] tb_AB;
     wire [15:0] tb_OA; 
@@ -20,15 +21,17 @@ module register_TB;
 
     register_file rf_DUT(
         .clk(tb_clk), 
-        .rf_rw(tb_rw), 
+        .rf_rw(tb_rw),
+        .rf_ld_en(tb_ld_en), 
         .rf_am(tb_am),
-        .rf_inRow(tb_inRow), 
+        .rf_inRow(tb_inRow),
+        .rf_load(tb_load), 
         .rf_AA(tb_AA), 
         .rf_AB4(tb_AB[3:0]), 
         .rf_AB3(tb_AB[7:4]), 
         .rf_AB2(tb_AB[11:8]), 
         .rf_AB1(tb_AB[15:12]), 
-        .DA(tb_DA), 
+        .rf_DA(tb_DA), 
         .rf_OA(tb_OA), 
         .rf_OB4(tb_OB[15:0]), 
         .rf_OB3(tb_OB[31:16]), 

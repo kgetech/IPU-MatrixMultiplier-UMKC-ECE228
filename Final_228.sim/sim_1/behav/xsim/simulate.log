@@ -1,45 +1,37 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
-Input Value:  1  0  0  0
-Input Value:  0  1  0  0
-Input Value:  0  0  1  0
-Input Value:  0  0  0  1
-Input Value:  1  2  3  4
-Input Value:  5  6  7  8
-Input Value:  9 10 11 12
-Input Value: 13 14 15  0
-Input Value:  1  1  1  1
-Input Value:  2  2  2  2
-Input Value:  3  3  3  3
-Input Value:  4  4  4  4
-Input Value:  1  1  1  1
-Input Value:  1  1  1  1
-Input Value:  1  1  1  1
-Input Value:  1  1  1  1
-| t=  738.00ns | Read Attempt #  0 | Adrs 4'b0000: [ 1  2  3  4] | OF z
-| t=  748.00ns | Read Attempt #  1 | Adrs 4'b0001: [ 5  6  7  8] | OF z
-| t=  758.00ns | Read Attempt #  2 | Adrs 4'b0010: [ 9 10 11 12] | OF z
-| t=  768.00ns | Read Attempt #  3 | Adrs 4'b0011: [13 14 15  0] | OF z
-| t=  778.00ns | Read Attempt #  4 | Adrs 4'b0100: [ 1  1  1  1] | OF z
-| t=  788.00ns | Read Attempt #  5 | Adrs 4'b0101: [ 2  2  2  2] | OF z
-| t=  798.00ns | Read Attempt #  6 | Adrs 4'b0110: [ 3  3  3  3] | OF z
-| t=  808.00ns | Read Attempt #  7 | Adrs 4'b0111: [ 4  4  4  4] | OF z
-| t=  818.00ns | Read Attempt #  8 | Adrs 4'b1000: [ 2  2  2  2] | OF z
-| t=  828.00ns | Read Attempt #  9 | Adrs 4'b1001: [ 3  3  3  3] | OF z
-| t=  838.00ns | Read Attempt # 10 | Adrs 4'b1010: [ 4  4  4  4] | OF z
-| t=  848.00ns | Read Attempt # 11 | Adrs 4'b1011: [ 5  5  5  5] | OF z
-| t=  858.00ns | Read Attempt # 12 | Adrs 4'b1100: [ 1  2  3  4] | OF z
-| t=  868.00ns | Read Attempt # 13 | Adrs 4'b1101: [ 5  6  7  8] | OF z
-| t=  878.00ns | Read Attempt # 14 | Adrs 4'b1110: [ 9 10 11 12] | OF z
-| t=  888.00ns | Read Attempt # 15 | Adrs 4'b1111: [13 14 15  0] | OF z
-| t=  898.00ns | Read Attempt # 16 | Adrs 4'bzzzz: [ z  z  z  z] | OF z
-| t=  908.00ns | Read Attempt # 17 | Adrs 4'bzzzz: [ z  z  z  z] | OF z
-| t=  918.00ns | Read Attempt # 18 | Adrs 4'bzzzz: [ z  z  z  z] | OF z
-| t=  928.00ns | Read Attempt # 19 | Adrs 4'bzzzz: [ z  z  z  z] | OF z
-| t=  938.00ns | Read Attempt # 20 | Adrs 4'b0000: [ 2  2  2  2] | OF z
-| t=  948.00ns | Read Attempt # 21 | Adrs 4'b0001: [ 3  3  3  3] | OF z
-| t=  958.00ns | Read Attempt # 22 | Adrs 4'b0010: [ 4  4  4  4] | OF z
-| t=  968.00ns | Read Attempt # 23 | Adrs 4'b0011: [ 5  5  5  5] | OF z
-| t=  978.00ns | Read Attempt # 24 | Adrs 4'bzzzz: [ z  z  z  z] | OF z
-| t=  988.00ns | Read Attempt # 25 | Adrs 4'bzzzz: [ z  z  z  z] | OF z
-| t=  998.00ns | Read Attempt # 26 | Adrs 4'bzzzz: [ z  z  z  z] | OF z
+[ x] [ x] [ x] [ x]
+[ 0] [ 0] [ 0] [ 0]
+[ 1] [ 1] [ 1] [ 1]
+[ 2] [ 2] [ 2] [ 2]
+[ 3] [ 3] [ 3] [ 3]
+[ 0] [ 0] [ 0] [ 0]
+[ 1] [ 1] [ 1] [ 1]
+[ 2] [ 2] [ 2] [ 2]
+[ 3] [ 3] [ 3] [ 3]
+[ 0] [ 0] [ 0] [ 0]
+[ 1] [ 1] [ 1] [ 1]
+[ 2] [ 2] [ 2] [ 2]
+[ 3] [ 3] [ 3] [ 3]
+[ 0] [ 0] [ 0] [ 0]
+[ 1] [ 1] [ 1] [ 1]
+[ 2] [ 2] [ 2] [ 2]
+[ 3] [ 3] [ 3] [ 3]
+[ 3] [ 3] [ 3] [ 3]
+[ 0] [ 0] [ 0] [ 0]
+[ 4] [ 8] [ 4] [ 8]
+[ 8] [ 0] [ 8] [ 0]
+[12] [ 8] [12] [ 8]
+[ 0] [ 0] [ 0] [ 0]
+[ 4] [ 8] [ 4] [ 8]
+[ 8] [ 0] [ 8] [ 0]
+[12] [ 8] [12] [ 8]
+[ 0] [ 0] [ 0] [ 0]
+[ 4] [ 8] [ 4] [ 8]
+[ 8] [ 0] [ 8] [ 0]
+[12] [ 8] [12] [ 8]
+[ 0] [ 0] [ 0] [ 0]
+[ 4] [ 8] [ 4] [ 8]
+[ 8] [ 0] [ 8] [ 0]
+[12] [ 8] [12] [ 8]
+$finish called at time : 340 ns : File "/mnt/SATASSD/Final_228/Final_228.srcs/sim_1/new/matrix_multi_TB.v" Line 75

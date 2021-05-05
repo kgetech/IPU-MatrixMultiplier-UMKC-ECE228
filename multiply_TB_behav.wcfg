@@ -11,85 +11,53 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="797916fs"></ZoomStartTime>
-      <ZoomEndTime time="1040417fs"></ZoomEndTime>
-      <Cursor1Time time="1000000fs"></Cursor1Time>
+      <ZoomStartTime time="77707fs"></ZoomStartTime>
+      <ZoomEndTime time="332108fs"></ZoomEndTime>
+      <Cursor1Time time="340000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+      <NameColumnWidth column_width="212"></NameColumnWidth>
+      <ValueColumnWidth column_width="83"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
-   <wvobject fp_name="/matrix_multi_TB/tb_clk" type="logic">
+   <WVObjectSize size="10" />
+   <wvobject type="logic" fp_name="/matrix_multi_TB/tb_clk">
       <obj_property name="ElementShortName">tb_clk</obj_property>
       <obj_property name="ObjectShortName">tb_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_rw" type="logic">
-      <obj_property name="ElementShortName">tb_rw</obj_property>
-      <obj_property name="ObjectShortName">tb_rw</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_am" type="logic">
-      <obj_property name="ElementShortName">tb_am</obj_property>
-      <obj_property name="ObjectShortName">tb_am</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_mm_en" type="logic">
+   <wvobject type="logic" fp_name="/matrix_multi_TB/tb_mm_en">
       <obj_property name="ElementShortName">tb_mm_en</obj_property>
       <obj_property name="ObjectShortName">tb_mm_en</obj_property>
    </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_mm_OF" type="logic">
+   <wvobject type="array" fp_name="/matrix_multi_TB/tb_mm_A">
+      <obj_property name="ElementShortName">tb_mm_A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_mm_A[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_multi_TB/tb_mm_B1">
+      <obj_property name="ElementShortName">tb_mm_B1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_mm_B1[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_multi_TB/tb_mm_B2">
+      <obj_property name="ElementShortName">tb_mm_B2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_mm_B2[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_multi_TB/tb_mm_B3">
+      <obj_property name="ElementShortName">tb_mm_B3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_mm_B3[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_multi_TB/tb_mm_B4">
+      <obj_property name="ElementShortName">tb_mm_B4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_mm_B4[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_multi_TB/tb_mm_C">
+      <obj_property name="ElementShortName">tb_mm_C[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_mm_C[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matrix_multi_TB/tb_mm_OF">
       <obj_property name="ElementShortName">tb_mm_OF</obj_property>
       <obj_property name="ObjectShortName">tb_mm_OF</obj_property>
    </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_inRow" type="array">
-      <obj_property name="ElementShortName">tb_inRow[15:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_inRow[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_AA" type="array">
-      <obj_property name="ElementShortName">tb_AA[3:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_AA[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_DA" type="array">
-      <obj_property name="ElementShortName">tb_DA[3:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_DA[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_AB" type="array">
-      <obj_property name="ElementShortName">tb_AB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_AB[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_OA" type="array">
-      <obj_property name="ElementShortName">tb_OA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_OA[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_MC" type="array">
-      <obj_property name="ElementShortName">tb_MC[15:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_MC[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/tb_OB" type="array">
-      <obj_property name="ElementShortName">tb_OB[63:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_OB[63:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/i" type="array">
+   <wvobject type="array" fp_name="/matrix_multi_TB/i">
       <obj_property name="ElementShortName">i[4:0]</obj_property>
       <obj_property name="ObjectShortName">i[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/j" type="array">
-      <obj_property name="ElementShortName">j[3:0]</obj_property>
-      <obj_property name="ObjectShortName">j[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/matrix_multi_TB/k" type="array">
-      <obj_property name="ElementShortName">k[3:0]</obj_property>
-      <obj_property name="ObjectShortName">k[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

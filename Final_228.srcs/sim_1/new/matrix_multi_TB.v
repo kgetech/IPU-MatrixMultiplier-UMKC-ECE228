@@ -11,29 +11,30 @@
 //TODO: Figure out disconnects in waveform analysis, and why B matrix is outputting strange values
 
 module matrix_multi_TB;
-    reg tb_clk, tb_rw, tb_am, tb_mm_en;
-    reg [15:0] tb_inRow;
-    reg [3:0] tb_AA, tb_DA;
-    reg [15:0] tb_AB;
-    wire [15:0] tb_OA, tb_MC; 
-    wire [63:0] tb_OB;
-    wire tb_mm_OF;
-    
-    ipu_top ipu_DUT(
-    .top_clk(tb_clk),
-    .top_rw(tb_rw), 
-    .top_am(tb_am), 
-    .top_mm_en(tb_mm_en), 
-    .top_mm_OF(tb_mm_OF),
-    .top_inRow(tb_inRow),
-    .top_AA(tb_AA), 
-    .top_DA(tb_DA),
-    .top_AB(tb_AB),
-    .top_OA(tb_OA), 
-    .top_MC(tb_MC), 
-    .top_OB(tb_OB)
+    reg         tb_clk,                              
+                tb_mm_en;                            
+    reg [15:0]  tb_mm_A,        
+                tb_mm_B1,                            
+                tb_mm_B2,                            
+                tb_mm_B3,                            
+                tb_mm_B4;                            
+    wire [15:0] tb_mm_C;   
+    wire        tb_mm_OF;                          
+                                         
+    matrix_multi mm_DUT(
+        .clk    (tb_clk   ), 
+        .mm_en  (tb_mm_en ), 
+        .mm_A   (tb_mm_A  ), 
+        .mm_B1  (tb_mm_B1 ), 
+        .mm_B2  (tb_mm_B2 ), 
+        .mm_B3  (tb_mm_B3 ), 
+        .mm_B4  (tb_mm_B4 ),
+        .mm_C   (tb_mm_C  ),
+        .mm_OF  (tb_mm_OF )
     );
-        
+
+
+
     initial $timeformat(-9, 2, "ns", 10); //sets time format for $display of %t
 
     initial tb_clk <= 0;
@@ -42,163 +43,35 @@ module matrix_multi_TB;
     reg [4:0] i;
     initial 
     begin
-    for (i = 5'd0; i <5'd16; i = i+5'd1)  //this loop increments through the destination addresses
+        tb_mm_en <= 1'b1;
+        for(i = 5'd0; i<5'd16; i = i+5'd1)
         begin
-            tb_DA <= i[3:0];
-            #3;
-            //$display("| t = %t | i == %d : %b | DA: %b", $realtime, i, i, tb_DA);
-            #7;
-        end
-    end 
-    
-    reg [3:0] j;
-    reg [3:0] k;
-    initial
-    begin
-        tb_am <= 0;  //set to default state, doesn't matter right now
-        tb_rw <= 1;  //set to write state
-        tb_mm_en <= 0; //shut off the multiplier
-        #3; //wait for signals to propagate
-        tb_inRow <= {4'd1,4'd0,4'd0,4'd0}; //send 1 row of a matrix to address 0 per the for loop
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd0,4'd1,4'd0,4'd0};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd0,4'd0,4'd1,4'd0};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd0,4'd0,4'd0,4'd1};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd1,4'd2,4'd3,4'd1};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd3,4'd2,4'd1,4'd0};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd0,4'd0,4'd0,4'd0};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd1,4'd1,4'd1,4'd1};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd1,4'd1,4'd1,4'd1}; //send 1 row of a matrix to address 0 per the for loop
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd2,4'd2,4'd2,4'd2};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd2,4'd2,4'd2,4'd2};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd1,4'd1,4'd1,4'd1};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd1,4'd2,4'd3,4'd1}; //send 1 row of a matrix to address 0 per the for loop
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd1,4'd2,4'd3,4'd1};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd1,4'd2,4'd3,4'd1};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        #3;
-        tb_inRow <= {4'd1,4'd2,4'd3,4'd1};
-        #7;
-        $display("Input Value: %d %d %d %d", tb_inRow[15:12], tb_inRow[11:8], tb_inRow[7:4], tb_inRow[3:0]);
-        /*
-        #3;
-        tb_am <= 1;
-        tb_rw <= 0;
-        #7
-        for (k = 4'd1; k < 4'd4; k = k + 4'd1)
-        begin
-            tb_AB <= {k*4'd4, k*4'd4+4'd1, k*4'd4+4'd2, k*4'd4+4'd3}; // will pick the four rows of matrix B
-            for (j = 0 ; j < 4'd4; j = j + 4'd1) 
-            begin
-                tb_AA <= (k-4'd1)*4'd4 + j; //will increment through the rows of matrix A
-                #7;
-                $display("| t=%t | Matrix A, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, j, tb_AA, tb_OA[15:12],tb_OA[11:8], tb_OA[7:4], tb_OA[3:0]);
-                #3;
-            end
+            tb_mm_A     <=  {4{2'd0,i[1:0]}};  
+            tb_mm_B1    <=  {4'd1, 4'd0, 4'd0, 4'd0}; 
+            tb_mm_B2    <=  {4'd0, 4'd1, 4'd0, 4'd0}; 
+            tb_mm_B3    <=  {4'd0, 4'd0, 4'd1, 4'd0}; 
+            tb_mm_B4    <=  {4'd0, 4'd0, 4'd0, 4'd1};
             #5;
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d] ", $realtime, k-4'd1, k*4'd4, tb_OB[63:60],tb_OB[59:56], tb_OB[55:52], tb_OB[51:48]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k, k*4'd4+4'd1, tb_OB[47:44],tb_OB[43:40], tb_OB[39:36], tb_OB[35:32]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k+4'd1, k*4'd4+4'd2, tb_OB[31:28],tb_OB[27:24], tb_OB[23:20], tb_OB[19:16]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k+4'd3, k*4'd4+4'd3, tb_OB[15:12],tb_OB[11:8], tb_OB[7:4], tb_OB[3:0]);
-            #5;
-        end 
-        */
-        #3;
-        tb_am <= 0;
-        tb_rw <= 0;
-        #7;
-        /*
-        for (k = 4'd1; k < 4'd4; k = k + 4'd1)
-        begin
-            tb_AB <= {k*4'd4, k*4'd4+4'd1, k*4'd4+4'd2, k*4'd4+4'd3}; // will pick the four rows of matrix B
-            for (j = 0 ; j < 4'd4; j = j + 4'd1) 
-            begin
-                tb_AA <= (k-4'd1)*4'd4 + j; //will increment through the rows of matrix A
-                #7;
-                $display("| t=%t | Matrix A, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, j, tb_AA, tb_OA[15:12],tb_OA[11:8], tb_OA[7:4], tb_OA[3:0]);
-                #3;
-            end
-            #5;
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d] ", $realtime, k-4'd1, k*4'd4, tb_OB[63:60],tb_OB[59:56], tb_OB[55:52], tb_OB[51:48]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k, k*4'd4+4'd1, tb_OB[47:44],tb_OB[43:40], tb_OB[39:36], tb_OB[35:32]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k+4'd1, k*4'd4+4'd2, tb_OB[31:28],tb_OB[27:24], tb_OB[23:20], tb_OB[19:16]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k+4'd3, k*4'd4+4'd3, tb_OB[15:12],tb_OB[11:8], tb_OB[7:4], tb_OB[3:0]);
+            $display("[%d] [%d] [%d] [%d]", tb_mm_C[15:12], tb_mm_C[11:8], tb_mm_C[7:4], tb_mm_C[3:0]);
             #5;
         end
-        */
-        tb_mm_en <= 1; //turn on the multiplier output
-        #10;
-        for (k = 4'd1; k < 4'd4; k = k + 4'd1)
+        #5;
+        $display("[%d] [%d] [%d] [%d]", tb_mm_C[15:12], tb_mm_C[11:8], tb_mm_C[7:4], tb_mm_C[3:0]);
+        #5;
+        for(i = 5'd0; i<5'd16; i = i+5'd1)
         begin
-            tb_AB <= {k*4'd4, k*4'd4+4'd1, k*4'd4+4'd2, k*4'd4+4'd3}; // will pick the four rows of matrix B
-            for (j = 0 ; j < 4'd4; j = j + 4'd1) 
-            begin
-                tb_AA <= (k-4'd1)*4'd4 + j; //will increment through the rows of matrix A
-                #17;
-                $display("| t=%t | Matrix A, Row %d | Adrs 4'b%b: [%d %d %d %d] | Matrix C, Row %d [%d %d %d %d] | OF %b", 
-                $realtime, 
-                j, 
-                tb_AA, 
-                tb_OA[15:12],
-                tb_OA[11:8], 
-                tb_OA[7:4], 
-                tb_OA[3:0], 
-                j, 
-                tb_MC[15:12], 
-                tb_MC[11:8], 
-                tb_MC[7:4], 
-                tb_MC[3:0],
-                tb_mm_OF);
-                #3;
-            end
+            tb_mm_A     <=  {4{2'd0,i[1:0]}};  
+            tb_mm_B1    <=  {4'd1, 4'd1, 4'd1, 4'd1}; 
+            tb_mm_B2    <=  {4'd2, 4'd2, 4'd2, 4'd2}; 
+            tb_mm_B3    <=  {4'd1, 4'd1, 4'd1, 4'd1}; 
+            tb_mm_B4    <=  {4'd2, 4'd2, 4'd2, 4'd2};
             #5;
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d] ", $realtime, k-4'd1, k*4'd4, tb_OB[63:60],tb_OB[59:56], tb_OB[55:52], tb_OB[51:48]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k, k*4'd4+4'd1, tb_OB[47:44],tb_OB[43:40], tb_OB[39:36], tb_OB[35:32]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k+4'd1, k*4'd4+4'd2, tb_OB[31:28],tb_OB[27:24], tb_OB[23:20], tb_OB[19:16]);
-            $display("| t=%t | Matrix B, Row %d | Adrs 4'b%b: [%d %d %d %d]", $realtime, k+4'd3, k*4'd4+4'd3, tb_OB[15:12],tb_OB[11:8], tb_OB[7:4], tb_OB[3:0]);
+            $display("[%d] [%d] [%d] [%d]", tb_mm_C[15:12], tb_mm_C[11:8], tb_mm_C[7:4], tb_mm_C[3:0]);
             #5;
         end
+        #5;
+        $display("[%d] [%d] [%d] [%d]", tb_mm_C[15:12], tb_mm_C[11:8], tb_mm_C[7:4], tb_mm_C[3:0]);
+        #5;
+        $finish;
     end
 endmodule

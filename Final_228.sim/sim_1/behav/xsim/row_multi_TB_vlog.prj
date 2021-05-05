@@ -1,7 +1,5 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../Final_228.srcs/sources_1/new/FA_nb.v" \
-"../../../../Final_228.srcs/sources_1/new/multi_nb.v" \
 "../../../../Final_228.srcs/sources_1/new/row_multi.v" \
 "../../../../Final_228.srcs/sim_1/new/row_multi_TB.v" \
 
