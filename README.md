@@ -14,7 +14,6 @@ ECE 228: Introduction to Computer Design
 University of Missouri-Kansas City
 Instructor: Mostafizur Rahman
 
-############################################
 Goal: Create a device capable of NxN matrix multiplication, demonstrate 4x4 matrix multiplication of four-bit numbers.
 
 We started with an attempt at a TPU-like systolic array for solving 4x4 matrices. After listening to a lecture on matrices in
@@ -35,7 +34,6 @@ and instructions, as well.
 
 -Kyle Goodman
 
-#############################################
 
 
 
