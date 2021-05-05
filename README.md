@@ -1,9 +1,9 @@
 # IPU-MatrixMultiplier-UMKC-ECE228 Spring 2021
 #### OBLIGATORY NOTE #################################################################################################################
-# It should be noted that this design was created as a part of a class at UMKC, and that licensing restrictions may be in place that #
-# I am not aware of. Should you neglect to perform your due diligence and assume that the GNU-GPL licensing is the only relevant     #
-# intellectual property policy that applies to this code, you agree to not hold any of our team listed below, nor our instructor,    #
-# nor our university liable for your own neglect.                                                                                    #
+It should be noted that this design was created as a part of a class at UMKC, and that licensing restrictions may be in place that 
+I am not aware of. Should you neglect to perform your due diligence and assume that the GNU-GPL licensing is the only relevant     
+intellectual property policy that applies to this code, you agree to not hold any of our team listed below, nor our instructor,    
+nor our university liable for your own neglect.                                                                                    
 ######################################################################################################################################
 
 Team:
