@@ -19,7 +19,7 @@ We started with an attempt at a TPU-like systolic array for solving 4x4 matrices
 
 # Final thoughts:
 
-To make this IEEE 754 compliant, the arithmetic components would need to be refactored for 16-bit half-precision floating, point numbers, and this may happen soon. In addition, the register file would need to be expanded as well as the data control muxes and demuxes. It would be nice to implement this in such a way as to enable an SRAM Cache for retrieving and depositing data and instructions, as well. 
+To make this IEEE 754 compliant, the arithmetic components would need to be refactored for 16-bit half-precision floating-point numbers, and this may happen soon. In addition, the register file would need to be expanded as well as the data control muxes and demuxes. It would be nice to implement this in such a way as to enable an SRAM Cache for retrieving and depositing data and instructions, as well. 
 
 *-Kyle Goodman*
 
